@@ -1,0 +1,25 @@
+// method that takes array of integers and returns new array with odd elements
+
+// CASUAL
+
+Take array of ints called arr
+Create empty array called result
+
+Iterate over elements in arr
+If the index of the element in arr is odd, append it to result
+
+Return result
+
+// FORMAL
+
+START
+
+SET result = []
+
+LOOP over arr
+  IF arr[index] is odd
+    result[index] = arr[index]
+
+RETURN result
+
+END

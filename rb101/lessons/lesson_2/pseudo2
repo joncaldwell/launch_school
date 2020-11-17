@@ -1,0 +1,20 @@
+// method that takes array of strings, returns a string with all of them concatenated together
+
+// CASUAL
+
+Take array of strings via method argument
+Create an empty string called result
+
+For each element in input string, append it to result
+
+Return result
+
+// FORMAL
+
+START
+
+SET result = ""
+LOOP over each array element and append it to result
+PRINT result
+
+END

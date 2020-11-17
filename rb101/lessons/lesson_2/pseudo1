@@ -1,0 +1,26 @@
+// return the sum of two integers
+
+// CASUAL
+Prompt user to input first integer
+Get input and assign to num1
+
+Prompt user to input 2nd integer
+Get input and assign to num2
+
+Return the sum of both numbers
+
+// FORMAL
+
+START
+
+PRINT "Input 1st integer: "
+GET input and assign to num1
+
+PRINT "Input 2nd integer: "
+GET input and assign to num2
+
+SET result to num1 + num2
+
+PRINT result
+
+END
