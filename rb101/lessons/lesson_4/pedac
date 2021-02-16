@@ -4,6 +4,8 @@
 # all the substrings from a given string which are palindromes. Consider
 # palindrome words case sensitive.
 
+# EXAMPLES
+
 # Test cases:
 
 # palindrome_substrings("supercalifragilisticexpialidocious") == ["ili"]
