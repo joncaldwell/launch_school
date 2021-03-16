@@ -1,0 +1,52 @@
+PROBLEM
+
+Explicit reqs
+  - deck has 52 cards (4 suits: hearts, diamonds, clubs, spades; 13 values: 2-10, jack, queen, king and ace)
+  - goal is to get as close to 21 without going over. going over means you lose
+  - two players: the player and the dealer
+  - both are initially dealt two cards
+  - player can see their two cards, and one of the dealer's
+  - card values
+    - 2-10 are face value
+    - jack, queen, and king are worth 10
+    - ace can be 1 or 11, depending on the player's total hand value. 
+      - if player gets multiple aces, and the sum of the hand exceeds 21, then one or more of the aces will be
+      worth just 1 instead of 11
+  - in each turn, the player can decide to either "hit" or "stay" -- they can hit as many times as they want
+  - a hit gives the player another card
+    - if the total hand value exceeds 21, the player busts and loses
+  - when the player stays, it's the dealer's turn
+  - the dealer follows a strict rule: hit until the total is at least 17
+  - if the dealer busts, the player wins
+  - when both the player and the dealer have stayed, the total values of their hands are compared and the
+  winner is determined
+
+EXAMPLES / TEST CASES
+Dealer has: 7 and unknown card
+You have: 10 and 7
+
+DATA STRUCTURES
+Deck of cards
+  - cards: two properties per card: suit and number
+  - hands: each hand can have multiple cards
+  - best bet is a nested array of strings, with the suit first and the card value after
+    - ex: [['D', '8'], ['H', 'A']]
+
+ALGORITHM
+
+
+CODE
+Pseudocode
+
+1. Initialize deck
+2. Deal cards to player and dealer
+3. Player turn: hit or stay
+  - repeat until bust or "stay"
+    a. ask 'hit' or 'stay'
+    b. if 'stay' stop asking
+    c. otherwise go to a.
+4. If player bust, dealer wins
+5. Dealer turn: hit or stay
+  - repeat until total >= 17
+6. If dealer bust, player wins
+7. Compare cards and declare winner
