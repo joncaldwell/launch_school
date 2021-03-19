@@ -122,16 +122,16 @@ loop do
 
   loop do
     display_hands(dealer_hand, player_hand)
-    
+
     dealer_value = total(dealer_hand)
     player_value = total(player_hand)
-    
+
     answer = nil
 
     loop do
       puts
       prompt "Your hand value is #{player_value}"
-      break if busted?(player_value) # ** update for player_value
+      break if busted?(player_value)
 
       loop do
         prompt "(H)it or (s)tay?"
@@ -142,9 +142,9 @@ loop do
 
       if answer.start_with?('h')
         prompt "You chose to hit."
-        hit(player_hand, game_deck) # ** update hit method for player_value??
+        hit(player_hand, game_deck)
       end
-      
+
       player_value = total(player_hand)
       break if answer.start_with?('s') || busted?(player_value)
     end
@@ -159,7 +159,7 @@ loop do
 
     prompt "Dealer turn..."
     sleep SLEEP_DELAY
-    
+
     loop do
       puts
       prompt "Dealer hand value is: #{dealer_value}"
@@ -168,9 +168,9 @@ loop do
       if dealer_value <= 16
         hit(dealer_hand, game_deck)
       end
-      
+
       dealer_value = total(dealer_hand)
-      
+
       sleep SLEEP_DELAY
     end
 
@@ -186,22 +186,20 @@ loop do
     prompt "Dealer has #{dealer_hand}, for a total value of: #{dealer_value}"
     prompt "Player has #{player_hand}, for a total value of: #{player_value}"
     puts "==========="
-    
+
     winner = determine_winner(player_value, dealer_value)
     sleep SLEEP_DELAY
     display_winner(winner)
-    
+
     if winner == "player"
       player_score += 1
     elsif winner == "dealer"
       dealer_score += 1
     end
-    
 
-    
     break
   end
-  
+
   puts "---------------"
   prompt "Player score: #{player_score}"
   prompt "Dealer score: #{dealer_score}"
@@ -212,5 +210,5 @@ loop do
     break
   end
   system "clear"
-  
+
 end
