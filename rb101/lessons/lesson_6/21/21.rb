@@ -1,6 +1,7 @@
 SUITS = ['H', 'D', 'C', 'S']
 FACE_VALUES = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
 SLEEP_DELAY = 1.5
+GOAL_VALUE = 31
 
 def prompt(msg='')
   puts "=> #{msg}"
@@ -34,7 +35,7 @@ def deal_starting_cards(player_hand, dealer_hand, deck_of_cards)
 end
 
 def busted?(value)
-  value > 21
+  value > GOAL_VALUE
 end
 
 def total(cards)
@@ -52,7 +53,7 @@ def total(cards)
     end
   end
   values.select { |value| value == 'A' }.each do |_val|
-    sum -= 10 if sum > 21
+    sum -= 10 if sum > GOAL_VALUE
   end
   sum
 end
@@ -74,7 +75,7 @@ end
 def hit(player_hand, deck_of_cards)
   new_card = deck_of_cards.pop
   player_hand.push(new_card)
-  prompt("The new card is: #{card_value(new_card)}")
+  prompt("Hit! The new card is: #{card_value(new_card)}")
 end
 
 def determine_winner(player_score, dealer_score)
@@ -103,6 +104,7 @@ system "clear"
 
 puts
 prompt("Welcome to Blackjack!")
+prompt("The target hand value is: #{GOAL_VALUE}")
 puts
 
 player_score = 0
@@ -163,9 +165,9 @@ loop do
     loop do
       puts
       prompt "Dealer hand value is: #{dealer_value}"
-      break if dealer_value >= 17
+      break if dealer_value >= GOAL_VALUE - 4
 
-      if dealer_value <= 16
+      if dealer_value <= GOAL_VALUE - 5
         hit(dealer_hand, game_deck)
       end
 
