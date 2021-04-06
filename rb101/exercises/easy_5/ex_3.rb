@@ -2,10 +2,7 @@ def swap(str)
   words = str.split(' ')
   
   swapped_words = words.map do |word|
-    first_letter = word[0]
-    last_letter = word[-1]
-    word[0] = last_letter
-    word[-1] = first_letter
+    word[0], word[-1] = word[-1], word[0]
     word
   end
   
