@@ -1,5 +1,3 @@
-require 'pry'
-
 UPPERCASE = ('A'..'Z').to_a
 LOWERCASE = ('a'..'z').to_a
 NUMBERS = ('0'..'9').to_a
