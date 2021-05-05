@@ -1,0 +1,28 @@
+def fibonacci(num)
+  return 1 if num <= 2
+
+  result = [1, 1]
+  count = 2
+
+  loop do
+    break if count == num
+
+    result[count] = result[count - 2] + result[count - 1]
+    count += 1
+  end
+
+  result.last
+end
+
+# def sum(n)
+#   return 1 if n == 1
+#   n * sum(n - 1)
+# end
+
+p fibonacci(1) #== 1
+p fibonacci(2) #== 1
+p fibonacci(3) #== 2
+p fibonacci(4) #== 3
+p fibonacci(5) #== 5
+p fibonacci(12) #== 144
+p fibonacci(20) #== 6765
