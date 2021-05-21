@@ -29,7 +29,6 @@ ALGORITHM
   - change the current value to the holder variable value
 
 =end
-require 'pry'
 
 def bubble_sort!(array)
   swap_counter = 0
