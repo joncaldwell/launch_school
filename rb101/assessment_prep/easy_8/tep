@@ -1,0 +1,22 @@
+
+[1mFrom:[0m /home/ec2-user/environment/launchschool/rb101/assessment_prep/easy_8/ex_1.rb:20 Object#prompt_word:
+
+    [1;34m19[0m: [32mdef[0m [1;34mprompt_word[0m(word_type)
+ => [1;34m20[0m:   result = [1;36mnil[0m
+    [1;34m21[0m:   
+    [1;34m22[0m:   [32mcase[0m word_type
+    [1;34m23[0m:   [32mwhen[0m [33m:noun[0m
+    [1;34m24[0m:     result = [31m[1;31m"[0m[31ma noun[1;31m"[0m[31m[0m
+    [1;34m25[0m:   [32mwhen[0m [33m:verb[0m
+    [1;34m26[0m:     result = [31m[1;31m"[0m[31ma verb[1;31m"[0m[31m[0m
+    [1;34m27[0m:   [32mwhen[0m [33m:adjective[0m
+    [1;34m28[0m:     result = [31m[1;31m"[0m[31man adjective[1;31m"[0m[31m[0m
+    [1;34m29[0m:   [32mwhen[0m [33m:adverb[0m
+    [1;34m30[0m:     result = [31m[1;31m"[0m[31man adverb[1;31m"[0m[31m[0m
+    [1;34m31[0m:   [32melse[0m
+    [1;34m32[0m:     [32mreturn[0m [31m[1;31m"[0m[31mERROR: Incorrect data type. Please pass in a symbol.[1;31m"[0m[31m[0m
+    [1;34m33[0m:   [32mend[0m
+    [1;34m34[0m:   
+    [1;34m35[0m:   [31m[1;31m"[0m[31mEnter #{result}[0m[31m:[1;31m"[0m[31m[0m
+    [1;34m36[0m: [32mend[0m
+
