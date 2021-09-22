@@ -1,5 +1,12 @@
 require 'pry'
-binding.pry
+
+def leading_substrings(string)
+  results = []
+  
+  0.upto(string.size - 1) { |index| results << string[0..index] }
+  
+  results
+end
 
 def substrings(string)
   results = []
@@ -11,15 +18,7 @@ def substrings(string)
   results
 end
 
-def leading_substrings(string)
-  results = []
-  
-  0.upto(string.size - 1) { |index| results << string[0..index] }
-  
-  results
-end
-
-
+binding.pry
 leading_substrings('abcde')
 substrings('abcde') #== [
 #   'a', 'ab', 'abc', 'abcd', 'abcde',
