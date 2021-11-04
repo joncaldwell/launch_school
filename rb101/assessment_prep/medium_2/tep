@@ -1,0 +1,22 @@
+
+[1mFrom:[0m /home/ec2-user/environment/launchschool/rb101/assessment_prep/medium_2/ex_4.rb:51 Object#triangle:
+
+    [1;34m50[0m: [32mdef[0m [1;34mtriangle[0m(side1, side2, side3)
+ => [1;34m51[0m:   sides = [side1, side2, side3].sort
+    [1;34m52[0m:   same_sides = [1;34m0[0m
+    [1;34m53[0m:   
+    [1;34m54[0m:   sides.each [32mdo[0m |side|
+    [1;34m55[0m:     [32mif[0m sides.count(side) > same_sides
+    [1;34m56[0m:       same_sides = sides.count(side)
+    [1;34m57[0m:     [32mend[0m
+    [1;34m58[0m:   [32mend[0m
+    [1;34m59[0m:   
+    [1;34m60[0m:   [32mreturn[0m [33m:invalid[0m [32mif[0m sides[[1;34m0[0m..[1;34m1[0m].sum > sides.last && sides.min > [1;34m0[0m
+    [1;34m61[0m:   
+    [1;34m62[0m:   [32mcase[0m same_sides
+    [1;34m63[0m:   [32mwhen[0m [1;34m3[0m [32mthen[0m [32mreturn[0m [33m:equilateral[0m
+    [1;34m64[0m:   [32mwhen[0m [1;34m2[0m [32mthen[0m [32mreturn[0m [33m:isosceles[0m
+    [1;34m65[0m:   [32mwhen[0m [1;34m1[0m [32mthen[0m [32mreturn[0m [33m:scalene[0m
+    [1;34m66[0m:   [32mend[0m
+    [1;34m67[0m: [32mend[0m
+
